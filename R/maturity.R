@@ -34,13 +34,3 @@ MaturityFactory <- R6Class("MaturityFactory",
   )
 )
 
-# mat1 <- Maturity$new()
-# mat1$maturity_at_age <- matrix(rep(runif(12), times=3), nrow=3, byrow=TRUE)
-#
-# mat2 <- Maturity$new()
-# mat2$logistic_maturity(slope = 3, age_50 = 2.25, age_vector = 1:12, nyears = 27)
-#
-# mat <- rbind(mat1$maturity_at_age, mat2$maturity_at_age)
-# matF <- MaturityFactory$new()
-#
-# logistic_maturity <- matF$newLogisticMaturity(5,5,1:12,7)
