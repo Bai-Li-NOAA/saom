@@ -23,3 +23,25 @@ waa1$weight_at_age <- matrix(rep(1:12, times=3),
                              nrow=3,
                              byrow=TRUE)
 
+rec1 <- Recruitment$new()
+rec1$recruit <- rnorm(12, mean=1000, sd=100)
+
+rec <- RecruitmentFactory$new()
+rec2 <- rec$BevertonHoltRecruitment(1000, 0.75, 8, seq(100000, 3000, length.out = 12))
+rec2$recruit
+
+rec3 <- rec$RickerRecruitment(1000, 0.75, 8, seq(100000, 3000, length.out = 12))
+rec3$recruit
+
+rec2$recruit
+rec4 <- rec2
+rec4$initialize(R0=1000000, h=0.75, 8, seq(100000, 3000, length.out = 12))
+rec4$recruit
+rec2$recruit
+
+
+SSB <- seq(100000, 3000, length.out = 15)
+rec4 <- rec$RickerRecruitment(1000, 0.75, 8, SSB)
+rec4$recruit
+
+rec$BevertonHoltRecruitment
