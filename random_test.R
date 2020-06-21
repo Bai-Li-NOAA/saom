@@ -1,3 +1,15 @@
+#### Reference Class Test ####
+rec <- RecruitmentFactory$new()
+rec2 <- rec$BevertonHoltSRR(R0 = 10000, h = 0.75,spr_F0 = 8, SSB = c(10000,388888))
+rec2
+
+rec3 <- rec$BevertonHoltSRR(R0 = 2000, h = 0.6, spr_F0 = 8, SSB = 300000)
+rec3
+
+rickerrec <- rec$RickerSRR(R0 = 897656, h=0.765, spr_F0 = 3, SSB = 3462345)
+rickerrec
+
+#### R6 Test ####
 mat1 <- Maturity$new()
 mat1$maturity_at_age <- matrix(rep(1:12, times=3),
                                nrow=3,
