@@ -11,3 +11,5 @@ Encoding: UTF-8
 LazyData: true
 Suggests: 
     testthat
+URL: https://github.com/Bai-Li-NOAA/saom
+BugReports: https://github.com/Bai-Li-NOAA/saom/issues
